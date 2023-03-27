@@ -1,0 +1,84 @@
+
+   [
+       {"harkirat": {
+            "Name":"Harkirat Singh",
+            "id":"65845",
+            "phone":"6239572909",
+            "day":"Monday",
+            "date":"22/10/2000",
+            "inconclusive": false,
+            "incomplete": false,
+            "inTime": "9:00 am",
+            "outTime": "6:00 pm",
+            "deductions": [
+                
+                {
+                    "inTime": "9:00 am",
+                    "outTime": null,
+                    "deduction": "0",
+                    "time":0
+                },
+             
+                {
+                    "outTime": "1:00 pm",
+                    "inTime": null,
+                    "deduction": "0",
+                    "time":240
+                },
+                {
+                    "outTime": null,
+                    "inTime": "1:30 pm",
+                    "deduction": "0",
+                    "time":30
+                },
+
+                {
+                    "outTime": "6:00 pm",
+                    "inTime": null,
+                    "deduction": "0",
+                    "time":300
+                }
+            ]
+       }
+    },
+    {
+        "aman":{
+            "inconclusive": false,
+            "incomplete": false,
+            "inTime": "8:00 am",
+            "outTime": "5:00 pm",
+            "deductions": [
+                
+                {
+                    "inTime": "8:00 am",
+                    "outTime": null,
+                    "deduction": "0",
+                    "time":0
+                },
+             
+                {
+                    "outTime": "2:00 pm",
+                    "inTime": null,
+                    "deduction": "0",
+                    "time":240
+                },
+                {
+                    "outTime": null,
+                    "inTime": "2:30 pm",
+                    "deduction": "0",
+                    "time":30
+                },
+
+                {
+                    "outTime": "5:00 pm",
+                    "inTime": null,
+                    "deduction": "0",
+                    "time":300
+                }
+            ]
+       }
+    }
+    
+        
+    ]
+   
