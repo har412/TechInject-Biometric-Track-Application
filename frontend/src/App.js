@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     async function fetchData(){
       axios({
-        url:'http://localhost:8000/test/timeline',
+        url:'https://biometric.onrender.com/test/timeline',
         method:'get',
         'headers': {
           'content-type':'application/json',

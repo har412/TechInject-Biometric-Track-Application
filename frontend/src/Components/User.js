@@ -29,7 +29,7 @@ function User(props) {
         async function fetchData() {
             if (props.user && props.user.id) {
                 axios({
-                    url:`http://localhost:8000/test/user/${props.user.id}`,
+                    url:`https://biometric.onrender.com/test/user/${props.user.id}`,
                     method:'get',
                     headers: {
                         'content-type': 'application/json',
