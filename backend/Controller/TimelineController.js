@@ -43,88 +43,7 @@ exports.postTimeline=(req,res)=>{
               }
             ]
           }
-        // {
-        //     id: 12348,
-        //     inconclusive: false,
-        //     incomplete: false,
-        //     totalInTime: "10:00 am",
-        //     totalOutTime: "11:00 pm",
-        //     timeline: [
-        //       {
-        //         punchId: 1,
-        //         scanType:"fingerprint",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: "10:00 am",
-        //         outTime: null,
-        //       },
-        //       {
-        //         punchId: 2,
-        //         scanType:"face Scan",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: null,
-        //         outTime: "3:00 pm"
-        //       },
-        //       {
-        //         punchId: 3,
-        //         scanType:"fingerprint",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: "3:30 pm",
-        //         outTime: null
-        //       },
-        //       {
-        //         punchId: 4,
-        //         scanType:"face Scan",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: null,
-        //         outTime: "11:00 pm"
-        //       }
-        //     ]
-        //   }
-        // {
-        //     id: 12347,
-        //     inconclusive: false,
-        //     incomplete: false,
-        //     totalInTime: "8:00 am",
-        //     totalOutTime: "8:00 pm",
-        //     timeline: [
-        //       {
-        //         punchId: 1,
-        //         scanType:"fingerprint",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: "8:00 am",
-        //         outTime: null,
-        //       },
-        //       {
-        //         punchId: 2,
-        //         scanType:"face Scan",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: null,
-        //         outTime: "2:00 pm"
-        //       },
-        //       {
-        //         punchId: 3,
-        //         scanType:"fingerprint",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: "3:30 pm",
-        //         outTime: null
-        //       },
-        //       {
-        //         punchId: 4,
-        //         scanType:"face Scan",
-        //         deduction: null,
-        //         Exemption:null,
-        //         inTime: null,
-        //         outTime: "8:00 pm"
-        //       }
-        //     ]
-        //   }
+        
         
     )
     
@@ -134,19 +53,6 @@ exports.postTimeline=(req,res)=>{
         console.log(data)
         res.send(data)
 })
-    .catch((err)=>{
-        console.log(err)
-    })
-
-
-}
-exports.getTimeline= (req,res) =>{
-
-    TimeLine.find()
-    .then((data)=>{
-        res.json(data);
-    }
-    )
     .catch((err)=>{
         console.log(err)
     })

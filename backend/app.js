@@ -6,7 +6,7 @@ db();
 // Routes
 const router = require('./Routes/index')
 app.use('/test',router);
-
-app.listen(8000,()=>{
-    console.log("app listening at 8000")
+const port = 8080;
+app.listen(port,()=>{
+    console.log(`app listening at ${port}`)
 })
