@@ -7,16 +7,6 @@ db();
 const router = require('./Routes/index')
 app.use('/test',router);
 
-//cors  
-
-const cors = require('cors')
-
-app.use(cors({
-    options:"*"
-}))
-
-
-
-app.listen(3004,()=>{
-    console.log("app listening at 3004")
+app.listen(8000,()=>{
+    console.log("app listening at 8000")
 })

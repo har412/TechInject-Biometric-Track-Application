@@ -21,10 +21,20 @@ const TimeLineSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    timeline:[{
+    timeline:[
+        {
         punchId:{
             type:Number,
             required:true
+        },
+        scanType:{
+            type:String,
+        },
+        deductions:{
+            type:Number,
+        },
+        Exemption:{
+            type:Number,
         },
         inTime:{
             type:String

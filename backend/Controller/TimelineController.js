@@ -3,35 +3,131 @@ const TimeLine = require('../Modals/Timeline')
 exports.postTimeline=(req,res)=>{
     const data = new TimeLine(
         {
-            id: 12345,
+            id: 12349,
             inconclusive: false,
             incomplete: false,
-            totalInTime: "9:00 am",
+            totalInTime: "6:00 am",
             totalOutTime: "6:00 pm",
             timeline: [
               {
                 punchId: 1,
-                inTime: "9:00 am",
-                outTime: null
+                scanType:"fingerprint",
+                deduction: null,
+                Exemption:null,
+                inTime: "6:00 am",
+                outTime: null,
               },
               {
                 punchId: 2,
+                scanType:"face Scan",
+                deduction: null,
+                Exemption:null,
                 inTime: null,
-                outTime: "1:00 pm"
+                outTime: "12:00 pm"
               },
               {
                 punchId: 3,
-                inTime: "1:30 pm",
-                outTime: null
+                scanType:"fingerprint",
+                deduction: null,
+                Exemption:null,
+                outTime: "3:30 pm",
+                intTime: null
               },
               {
                 punchId: 4,
+                scanType:"face Scan",
+                deduction: null,
+                Exemption:null,
                 inTime: null,
                 outTime: "6:00 pm"
               }
             ]
           }
+        // {
+        //     id: 12348,
+        //     inconclusive: false,
+        //     incomplete: false,
+        //     totalInTime: "10:00 am",
+        //     totalOutTime: "11:00 pm",
+        //     timeline: [
+        //       {
+        //         punchId: 1,
+        //         scanType:"fingerprint",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: "10:00 am",
+        //         outTime: null,
+        //       },
+        //       {
+        //         punchId: 2,
+        //         scanType:"face Scan",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: null,
+        //         outTime: "3:00 pm"
+        //       },
+        //       {
+        //         punchId: 3,
+        //         scanType:"fingerprint",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: "3:30 pm",
+        //         outTime: null
+        //       },
+        //       {
+        //         punchId: 4,
+        //         scanType:"face Scan",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: null,
+        //         outTime: "11:00 pm"
+        //       }
+        //     ]
+        //   }
+        // {
+        //     id: 12347,
+        //     inconclusive: false,
+        //     incomplete: false,
+        //     totalInTime: "8:00 am",
+        //     totalOutTime: "8:00 pm",
+        //     timeline: [
+        //       {
+        //         punchId: 1,
+        //         scanType:"fingerprint",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: "8:00 am",
+        //         outTime: null,
+        //       },
+        //       {
+        //         punchId: 2,
+        //         scanType:"face Scan",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: null,
+        //         outTime: "2:00 pm"
+        //       },
+        //       {
+        //         punchId: 3,
+        //         scanType:"fingerprint",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: "3:30 pm",
+        //         outTime: null
+        //       },
+        //       {
+        //         punchId: 4,
+        //         scanType:"face Scan",
+        //         deduction: null,
+        //         Exemption:null,
+        //         inTime: null,
+        //         outTime: "8:00 pm"
+        //       }
+        //     ]
+        //   }
+        
     )
+    
 
     data.save()
     .then((data)=>{
@@ -48,7 +144,20 @@ exports.getTimeline= (req,res) =>{
 
     TimeLine.find()
     .then((data)=>{
-        res.json(data).send();
+        res.json(data);
+    }
+    )
+    .catch((err)=>{
+        console.log(err)
+    })
+
+
+}
+exports.getTimeline= (req,res) =>{
+
+    TimeLine.find()
+    .then((data)=>{
+        res.json(data);
     }
     )
     .catch((err)=>{
